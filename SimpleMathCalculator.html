@@ -1,0 +1,95 @@
+<html>  
+  
+<head>  
+  
+<title>Simple Math Calculator</title>  
+
+<script function ="javascript" type= "text/javascript">
+function doit()
+{
+    a=document.calculator.choice.value;
+        if (a === "ADD")
+        {
+        addition();
+        }
+        if (a === "SUB")
+        {
+        subtraction();
+        }
+        if (a === "MUL")
+        {
+        multiply();
+        }
+    if (a === "DIV")
+    {
+        division();
+    }
+}
+</script> 
+
+<script language="javascript" type="text/javascript">  
+function multiply(){  
+a=Number(document.calculator.number1.value);  
+b=Number(document.calculator.number2.value);  
+c=a*b;  
+document.calculator.total.value=c;  
+}  
+</script>  
+  
+<script language="javascript" type="text/javascript">  
+function addition(){  
+a=Number(document.calculator.number1.value);  
+b=Number(document.calculator.number2.value);  
+c=a+b;  
+document.calculator.total.value=c;  
+}  
+</script>  
+  
+<script language="javascript" type="text/javascript">  
+function subtraction(){  
+a=Number(document.calculator.number1.value);  
+b=Number(document.calculator.number2.value);  
+c=a-b;  
+document.calculator.total.value=c;  
+}  
+</script>  
+  
+<script language="javascript" type="text/javascript">  
+function division(){  
+a=Number(document.calculator.number1.value);  
+b=Number(document.calculator.number2.value);  
+c=a/b;  
+document.calculator.total.value=c;  
+}  
+</script>  
+  
+</head>  
+  
+<body>  
+  
+<!-- Opening a HTML Form. -->   
+<form name="calculator">  
+  
+<!-- Here the user will input 1st number. -->   
+Number 1: <input type="text" name="number1">   
+   
+  
+<!-- Here the user will input 2nd number. -->   
+Number 2: <input type="text" name="number2">   
+  
+  
+<!-- Here the result will be displayed. -->   
+Get Result: <input type="text" name="total">   
+  
+  
+<!-- Here the respective button when clicked, calls only respective artimetic function. -->   
+ADD<input type="radio" value="ADD" name="choice" > 
+SUB<input type="radio" value="SUB" name="choice" > 
+MUL<input type="radio" value="MUL" name="choice" > 
+DIV<input type="radio" value="DIV" name="choice" >  
+
+</form>  
+<button onclick="doit()"> SUBMIT </button>
+
+</body>  
+</html>  
